@@ -25,7 +25,7 @@ CLI tool that given the folder produces a single html file report of complexity 
     - Location (or as non flagged cli argument, can be multiple, support glob)
     - Checks (so you can get warnings/errors when certain conditions are met)
     - Ignore (can be multiple)
-    - Report output (json or html)
+    - Report output (json, html, or compact)
 
 ## Project technical choices:
 
