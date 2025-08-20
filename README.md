@@ -1,12 +1,14 @@
 # complexity-explore
 
+> This was entirely vibe coded in a morning, several features are still missing, but it's a start.
+
 CLI tool that given the folder produces a single html file report of complexity of code in that folder.
 
 ## Report
 
 - Interactive and intuitive - so you can with a hover see more details
 - Shows aggregates of all different components
-- tree view of files (or folders)
+- Tree view of files (or folders)
     - Height: component 1
     - Color: component 2
 - Components can be configured what they are
@@ -26,21 +28,3 @@ CLI tool that given the folder produces a single html file report of complexity 
     - Checks (so you can get warnings/errors when certain conditions are met)
     - Ignore (can be multiple)
     - Report output (json, html, or compact)
-
-## Project technical choices:
-
-- Use tailwind in report
-- Produce report.html that is only vanilla javascript with no dependencies except for tailwind from CDN
-- Avoid transpilation or heavy frameworks
-- Paths should all support globbing
-- Respect gitignore
-
-## ToDo
-
-- Call it complore (COMPlexity expLORE)
-- Make the project described above, modularized and easy to extend
-- Make it as easy as possible to contribute
-- Think of the best language that will be easy to install (eg. ‘brew install complore’) for end user, set up for CI, for collaboration, readily available for collaborators… minimum dependencies
-- have github actions that ensure things work and deploy to the right channels, but quite minimum
-- Prepare it for open source on github
-- Make project of multiple files and do one by one with relevant memories of the previous file
