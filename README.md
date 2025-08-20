@@ -4,6 +4,8 @@
 
 CLI tool that given the folder produces a single html file report of complexity of code in that folder.
 
+![report example](https://otivdev.ams3.cdn.digitaloceanspaces.com/github/Screenshot%202025-08-20%20at%2011.28.52.png)
+
 ## Report
 
 - Interactive and intuitive - so you can with a hover see more details

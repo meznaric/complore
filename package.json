@@ -10,7 +10,10 @@
     "start": "node bin/complore",
     "test": "node --version && npm -s run lint || true",
     "lint": "node scripts/lint-stub.js",
-    "prepare": "node scripts/postinstall-stub.js"
+    "prepare": "node scripts/postinstall-stub.js",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "engines": {
     "node": ">=18"
@@ -20,15 +23,18 @@
     "ignore": "^5.3.2",
     "minimist": "^1.2.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.27.8",
+    "@changesets/changelog-github": "^0.5.0"
+  },
   "license": "MIT",
   "keywords": ["complexity", "git", "report", "cli"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourname/complore.git"
+    "url": "git+https://github.com/meznaric/complore.git"
   },
   "bugs": {
-    "url": "https://github.com/yourname/complore/issues"
+    "url": "https://github.com/meznaric/complore/issues"
   },
-  "homepage": "https://github.com/yourname/complore#readme"
+  "homepage": "https://github.com/meznaric/complore#readme"
 }
