@@ -6,6 +6,27 @@ CLI tool that given the folder produces a single html file report of complexity 
 
 ![report example](https://otivdev.ams3.cdn.digitaloceanspaces.com/github/Screenshot%202025-08-20%20at%2011.28.52.png)
 
+## Usage
+
+```bash
+complore - explore code complexity
+
+Usage: complore [paths..] [options]
+
+Options:
+  --config <file>        JSON config file
+  --out <path>           Output file (report.html or report.json)
+  --report <html|json|compact>   Output format (default: html)
+  --height <metric>      Metric for height (loc|activity|functions|imports|maxfunc)
+  --color <metric>       Metric for color (loc|activity|functions|imports|maxfunc)
+  --foldersOnly          Aggregate by folders only
+  --ignore <list>        Comma separated list of globs to ignore
+  --help                 Show help
+
+Example:
+  complore 'app/**/*.ts' 'app/**/*.tsx'
+```
+
 ## Report
 
 - Interactive and intuitive - so you can with a hover see more details
@@ -16,17 +37,8 @@ CLI tool that given the folder produces a single html file report of complexity 
 - Components can be configured what they are
     - Lines of codes relative to max
     - Activity: based on how often is the file changed relative to max (using git)
-    - Tree sitter query (so we can support large number of file types out of the box)
-        - Number of functions
-        - Number of imports
-        - Number of references
-        - Biggest function number of rows
-- Config
-    - Focus on folders (show folders and their files’ aggregates of those components)
-    - Height & Color components
-    - Output location
-    - Config file (only via cli, with sensible default)
-    - Location (or as non flagged cli argument, can be multiple, support glob)
-    - Checks (so you can get warnings/errors when certain conditions are met)
-    - Ignore (can be multiple)
-    - Report output (json, html, or compact)
+    - ~~Tree sitter query (so we can support large number of file types out of the box)~~ (currently regex based)
+        - Number of functions (functions)
+        - Number of imports (imports)
+        - ~~Number of references~~
+        - Biggest function number of rows (maxfunc)
